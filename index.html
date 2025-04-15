@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aisha Al-Harthi Restaurant | Muscat, Oman</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Live Demo Button -->
+  <a href="#" class="live-demo-btn" id="live-demo-btn">Live Demo</a>
+
+  <!-- Disclaimer Modal -->
+  <div class="disclaimer-modal" id="disclaimer-modal">
+    <div class="modal-content">
+      <span class="close-modal" id="close-disclaimer">×</span>
+      <h3>Demo Disclaimer</h3>
+      <p>This is a design demo for Aisha Al-Harthi’s restaurant website. The real project will be built using React, Node.js, Express, and MongoDB, offering a fully functional online ordering system, table reservations, loyalty program, and gift card purchases.</p>
+      <button class="btn-primary" id="close-disclaimer-btn">Understood</button>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-text">Aisha Al-Harthi Restaurant</span>
+        <span class="tagline">Authentic Omani Dining • Muscat</span>
+      </div>
+      <div class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#reservations" class="nav-link">Reservations</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#contact" class="nav-link">Contact</a>
+       
+
+
+        <button class="order-btn" id="order-btn">Order Now</button>
+      </div>
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="#home" class="mobile-nav-link active">Home</a>
+    <a href="#menu" class="mobile-nav-link">Menu</a>
+    <a href="#reservations" class="mobile-nav-link">Reservations</a>
+    <a href="#loyalty" class="mobile-nav-link">Loyalty Program</a>
+    <a href="#gift-cards" class="mobile-nav-link">Gift Cards</a>
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <button class="mobile-order-btn" id="mobile-order-btn">Order Now</button>
+  </div>
+
+  <!-- Order Modal -->
+  <div class="order-modal" id="order-modal">
+    <div class="modal-content">
+      <span class="close-modal" id="close-order">×</span>
+      <h3>Order Shuwa Plate</h3>
+      <p>Customize your order below:</p>
+      <form id="order-form">
+        <div class="customization-options">
+          <label><input type="checkbox" name="spices" value="extra-spices"> Extra Spices</label>
+          <label><input type="checkbox" name="side" value="hummus"> Add Hummus</label>
+          <label><input type="checkbox" name="side" value="salad"> Add Salad</label>
+          <label><input type="checkbox" name="side" value="bread"> Add Bread</label>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Special Instructions" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Add to Cart</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Authentic Omani Dining</h1>
+        <p class="hero-subtitle">Experience the flavors of Oman at Aisha Al-Harthi Restaurant in Muscat</p>
+        <div class="hero-btns">
+          <a href="#menu" class="btn-primary">Order Online</a>
+          <a href="#reservations" class="btn-primary">Reserve a Table</a>
+        </div>
+      </div>
+    </div>
+    <div class="delivery-banner">
+      <i class="fas fa-motorcycle"></i> Free Delivery on Orders Over 10 OMR
+    </div>
+  </section>
+   <!-- About Section -->
+   <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About Us</h2>
+        <div class="divider"></div>
+        <p class="section-description">Discover the story behind Aisha Al-Harthi Restaurant and our passion for Omani cuisine.</p>
+      </div>
+      <div class="about-content">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Restaurant">
+        </div>
+        <div class="about-text">
+          <h3>Aisha Al-Harthi Restaurant</h3>
+          <p>We bring the authentic flavors of Oman to your table with traditional recipes passed down through generations. Located in the heart of Muscat, we offer a warm dining experience with modern convenience. Our dishes are prepared with the finest ingredients, reflecting the rich culinary heritage of Oman.</p>
+          <p>Since opening in 2015, we’ve been committed to preserving Omani traditions while embracing innovation, such as our online ordering and table reservation systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Menu</h2>
+        <div class="divider"></div>
+        <p class="section-description">Savor the authentic taste of Oman with our traditional dishes, prepared with love and the finest ingredients.</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <img src="/Shuwa.jpg" alt="Shuwa Plate">
+          <h3>Shuwa Plate</h3>
+          <p>Slow-cooked lamb marinated with Omani spices, served with fragrant rice and a side of dates.</p>
+          <span class="price">8 OMR</span>
+          <button class="order-item-btn">Order Now</button>
+        </div>
+        <div class="menu-item">
+          <img src="/Kabsa.jpeg" alt="Kabsa">
+          <h3>Kabsa</h3>
+          <p>Traditional spiced rice with tender chicken, garnished with almonds and raisins.</p>
+          <span class="price">7 OMR</span>
+          <button class="order-item-btn">Order Now</button>
+        </div>
+        <div class="menu-item">
+          <img src="https://images.unsplash.com/photo-1604152135912-04a022e23696?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Harees">
+          <h3>Harees</h3>
+          <p>Wheat and meat porridge, a comforting Omani classic, served with ghee.</p>
+          <span class="price">6 OMR</span>
+          <button class="order-item-btn">Order Now</button>
+        </div>
+        <div class="menu-item">
+          <img src="/Mandi.jpg" alt="Mandi">
+          <h3>Mandi</h3>
+          <p>Smoked rice with tender goat meat, flavored with saffron and Omani spices.</p>
+          <span class="price">9 OMR</span>
+          <button class="order-item-btn">Order Now</button>
+        </div>
+        <div class="menu-item">
+          <img src="/Mihkak.webp" alt="Mishkak">
+          <h3>Mishkak</h3>
+          <p>Grilled skewers of marinated beef, served with flatbread and tamarind sauce.</p>
+          <span class="price">5 OMR</span>
+          <button class="order-item-btn">Order Now</button>
+        </div>
+        <div class="menu-item">
+          <img src="/Halwa.jpeg" alt="Halwa">
+          <h3>Omani Halwa</h3>
+          <p>Traditional Omani sweet made with saffron, cardamom, and rose water.</p>
+          <span class="price">3 OMR</span>
+          <button class="order-item-btn">Order Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservations Section -->
+  <section id="reservations" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Reserve a Table</h2>
+        <div class="divider"></div>
+        <p class="section-description">Book your table and enjoy a seamless dining experience with us.</p>
+      </div>
+      <div class="reservation-content">
+        <div class="floor-plan">
+          <img src="/Table.jpg" alt="Floor Plan">
+         
+        </div>
+        <div class="reservation-form">
+          <h3>Book Your Table</h3>
+          <form id="reservation-form">
+            <div class="form-group">
+              <input type="text" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+              <input type="date" placeholder="Date" required>
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="" disabled selected>Number of Guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary">Reserve Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loyalty Program Section -->
+  <section id="loyalty" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Loyalty Program</h2>
+        <div class="divider"></div>
+        <p class="section-description">Earn points with every order and redeem them for exciting rewards.</p>
+      </div>
+      <div class="loyalty-content">
+        <div class="loyalty-info">
+          <h3>Earn Points with Every Order</h3>
+          <p>Join our loyalty program to earn 1 point for every 1 OMR spent. Redeem points for discounts, free meals, or exclusive dining experiences.</p>
+          <div class="loyalty-points">
+            <h4>Your Points</h4>
+            <p>150 Points</p>
+            <p>Next Reward: Free Dessert at 200 Points</p>
+          </div>
+        </div>
+        <div class="loyalty-image">
+          <img src="/Loyalty Program.jpeg" alt="Loyalty Program">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gift Cards Section -->
+  <section id="gift-cards" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Gift Cards</h2>
+        <div class="divider"></div>
+        <p class="section-description">Share the taste of Oman with a gift card for your loved ones.</p>
+      </div>
+      <div class="gift-card-grid">
+        <div class="gift-card">
+          <img src="/50 Omr.jpeg" alt="Gift Card 50">
+          <h3>50 OMR Gift Card</h3>
+          <p>Perfect for a delightful dining experience.</p>
+          <button class="btn-primary">Buy Now</button>
+        </div>
+        <div class="gift-card">
+          <img src="./100 omr.webp" alt="Gift Card 100">
+          <h3>100 OMR Gift Card</h3>
+          <p>Share the taste of Oman with loved ones.</p>
+          <button class="btn-primary">Buy Now</button>
+        </div>
+        <div class="gift-card">
+          <img src="./200 OMR.jpeg" alt="Gift Card 200">
+          <h3>200 OMR Gift Card</h3>
+          <p>Ideal for a special celebration.</p>
+          <button class="btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="divider"></div>
+        <p class="section-description">Hear from our happy customers who love the taste of Oman.</p>
+      </div>
+      <div class="testimonials-slider">
+        <div class="testimonial-card active">
+          <div class="testimonial-content">
+            <div class="quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">The Shuwa Plate was absolutely divine! The online ordering system made it so easy to customize my meal. I’ll definitely be back for more!</p>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="client-info">
+              <div class="client-image">
+                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Ahmed Al-Balushi">
+              </div>
+              <div class="client-details">
+                <h4>Ahmed Al-Balushi</h4>
+                <span>Muscat Resident</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">The table reservation system is a game-changer! No more waiting, and the staff were so welcoming. The food was amazing as always.</p>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="client-info">
+              <div class="client-image">
+                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Fatima Al-Hinai">
+              </div>
+              <div class="client-details">
+                <h4>Fatima Al-Hinai</h4>
+                <span>Regular Customer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">I bought a gift card for my parents, and they loved the dining experience! The Kabsa was their favorite. Highly recommend this restaurant.</p>
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="client-info">
+              <div class="client-image">
+                <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Sara Al-Maskari">
+              </div>
+              <div class="client-details">
+                <h4>Sara Al-Maskari</h4>
+                <span>Visitor from Salalah</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+          <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="divider"></div>
+        <p class="section-description">Get in touch with us for reservations, catering, or any inquiries.</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="info-text">
+              <h4>Location</h4>
+              <p>Al Khuwair, Muscat, Oman</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="info-text">
+              <h4>Phone</h4>
+              <p>Main: +968 1234 5678<br>Delivery: +968 8765 4321</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info-text">
+              <h4>Email</h4>
+              <p>info@aisharestaurant.om<br>reservations@aisharestaurant.om</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="info-text">
+              <h4>Hours</h4>
+              <p>Daily: 12:00 PM - 10:00 PM<br>Friday: 2:00 PM - 11:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <img src="./Map.png" alt="Map">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Order Button -->
+  <a href="#menu" class="floating-order-btn">
+    <i class="fas fa-shopping-cart"></i> Order Now
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <span class="logo-text">Aisha Al-Harthi Restaurant</span>
+            <span class="tagline">Authentic Omani Dining • Muscat</span>
+          </div>
+          <p class="footer-about">Experience the rich flavors of Oman with our traditional dishes, prepared with love and the finest ingredients. Join us for an unforgettable dining experience.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#reservations">Reservations</a></li>
+            <li><a href="#loyalty">Loyalty Program</a></li>
+            <li><a href="#gift-cards">Gift Cards</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Popular Dishes</h4>
+          <ul class="footer-links">
+            <li><a href="#menu">Shuwa Plate</a></li>
+            <li><a href="#menu">Kabsa</a></li>
+            <li><a href="#menu">Harees</a></li>
+            <li><a href="#menu">Mandi</a></li>
+            <li><a href="#menu">Mishkak</a></li>
+            <li><a href="#menu">Omani Halwa</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Subscribe for exclusive offers and updates.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="copyright">
+          © 2025 Aisha Al-Harthi Restaurant. All Rights Reserved.
+        </div>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#home" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
